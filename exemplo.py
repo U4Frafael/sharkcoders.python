@@ -20,17 +20,17 @@ def slot(valor):
     for _ in range(15):
         reels_fake = [random.choice(opcoes) for _ in range(3)]
         print(f" {' | '.join(reels_fake)} ", end="\r")
-        time.sleep(0.1)
+        time.sleep(0.25)   # mais lento
 
 
     resultado = [random.choice(opcoes) for _ in range(3)]
     print(f"Resultado: {' | '.join(resultado)} \n")
  
     if resultado[0] == resultado[1] == resultado[2]:
-        print("Ganhaste, parabéns! 💰\n")
+        print("Ganhaste, parabéns!\n")
         dinheiro += valor
     else:
-        print("Perdeste, tenta novamente. ❌\n")
+        print("Perdeste, tenta novamente.\n")
         dinheiro -= valor
 
 while True:
